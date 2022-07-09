@@ -5,3 +5,5 @@ print /* block comment */"sus"
 /* multiline
 comment */
 
+compiler_consts:
+	print $sussy

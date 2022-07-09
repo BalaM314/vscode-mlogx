@@ -4,6 +4,7 @@ scopeName: source.mlogx
 uuid: DB6B8499-0963-434C-8A44-E24DB36DD350
 keyEquivalent: ^~S
 patterns:
+  - include: '#compiler_consts'
   - include: '#commands'
   - include: '#global_constants'
   - include: '#jump_conditions'
@@ -14,6 +15,13 @@ patterns:
   - include: '#string'
 
 repository:
+  compiler_consts:
+    comment: Compiler constants that are automatically replaced when your program is compiled.
+    name: support.constant.mlogx
+    match: '(\$)([\w\-_]+)\b'
+    captures:
+      '1': { name: punctuation.definition.dollar_sign.mlogx }
+
   at_names:
     comment: Internal variables with pre-defined meaning, in the format of @var-name
              See https://github.com/Anuken/Mindustry/blob/master/core/src/mindustry/logic/GlobalConstants.java
