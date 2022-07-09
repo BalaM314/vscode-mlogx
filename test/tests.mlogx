@@ -1,0 +1,7 @@
+comments:
+# hash comment
+// single line comment
+print /* block comment */"sus"
+/* multiline
+comment */
+
