@@ -1,9 +1,9 @@
 {
-    "name": "vscode-mlog",
-    "displayName": "Mindustry Logic",
-    "description": "Mindustry Logic (mlog) highlighting for VSCode!",
-    "version": "0.1.0",
-    "publisher": "Antyos",
+    "name": "vscode-mlogx",
+    "displayName": "Mindustry Logic Extended",
+    "description": "Mindustry Logic Extended (mlogx) highlighting for VSCode!",
+    "version": "1.0.0",
+    "publisher": "BalaM314",
     "icon": "images/logo.png",
     "license": "SEE LICENSE IN LICENSE",
     "engines": {
@@ -15,42 +15,43 @@
     "keywords": [
         "mindustry",
         "logic",
-        "mlog"
+        "mlog",
+        "mlogx"
     ],
-    "homepage": "https://github.com/Antyos/vscode-mlog/blob/main/README.md",
+    "homepage": "https://github.com/BalaM314/vscode-mlogx/blob/main/README.md",
     "bugs": {
-        "url": "https://github.com/Antyos/vscode-mlog/issues"
+        "url": "https://github.com/BalaM314/vscode-mlogx/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Antyos/vscode-mlog"
+        "url": "https://github.com/BalaM314/vscode-mlogx"
     },
     "contributes": {
         "languages": [
             {
-                "id": "mlog",
+                "id": "mlogx",
                 "aliases": [
-                    "Mindustry Logic",
-                    "mindustry logic",
-                    "mlog"
+                    "Mindustry Logic Extended",
+                    "mindustry logic extended",
+                    "mlogx"
                 ],
                 "extensions": [
-                    ".mlog"
+                    ".mlogx"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "mlog",
-                "scopeName": "source.mlog",
-                "path": "./syntaxes/mlog.tmLanguage.json"
+                "language": "mlogx",
+                "scopeName": "source.mlogx",
+                "path": "./syntaxes/mlogx.tmLanguage.json"
             }
         ]
     },
     "scripts": {
         "vscode:prepublish": "npm run update-grammar",
-        "update-grammar": "js-yaml syntaxes/mlog.YAML-tmLanguage > syntaxes/mlog.tmLanguage.json"
+        "update-grammar": "js-yaml syntaxes/mlogx.YAML-tmLanguage > syntaxes/mlogx.tmLanguage.json"
     },
     "devDependencies": {
         "js-yaml": "^4.1.0"

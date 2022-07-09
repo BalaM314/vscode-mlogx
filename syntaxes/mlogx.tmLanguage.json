@@ -1,10 +1,10 @@
 {
-  "name": "Mindustry Logic",
+  "name": "Mindustry Logic Extended",
   "fileTypes": [
-    "mlog"
+    "mlogx"
   ],
-  "scopeName": "source.mlog",
-  "uuid": "235046A8-4282-11EB-B378-0242AC130002",
+  "scopeName": "source.mlogx",
+  "uuid": "DB6B8499-0963-434C-8A44-E24DB36DD350",
   "keyEquivalent": "^~S",
   "patterns": [
     {
