@@ -437,6 +437,9 @@
               "name": "punctuation.definition.template-expression.end.mlogx"
             }
           }
+        },
+        {
+          "include": "#compiler_consts"
         }
       ]
     }

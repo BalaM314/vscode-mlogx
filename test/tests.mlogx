@@ -22,9 +22,12 @@ set x 5
 
 }
 &if amogus {
-	printf "amog {usa} {amo gus}"
+	printf "amog {usa} {amo gus} $sussy baka"
 	println "us"
 	printflush $msg
+}
+&for amog of a b c {
+
 }
 &for lol {
 }
@@ -33,9 +36,6 @@ set x 5
 &for sussyamogus in ship {
 }
 &for e of {
-
-}
-&for amog of a b c {
 
 }
 &for x in 1 5 {
