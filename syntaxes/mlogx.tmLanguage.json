@@ -14,6 +14,9 @@
       "include": "#commands"
     },
     {
+      "include": "#compiler_commands"
+    },
+    {
       "include": "#global_constants"
     },
     {
@@ -39,13 +42,81 @@
     "compiler_consts": {
       "comment": "Compiler constants that are automatically replaced when your program is compiled.",
       "name": "support.constant.mlogx",
-      "match": "((\\$)[\\w\\-_]+)\\b",
+      "match": "((\\$)[^ $]+)\\b",
       "captures": {
         "1": {
           "name": "variable.other.constant.mlogx"
         },
         "2": {
           "name": "punctuation.definition.dollar_sign.mlogx"
+        }
+      }
+    },
+    "compiler_commands": {
+      "comment": "Commands for the compiler to modify your code in some way.",
+      "name": "support.macro.mlogx",
+      "match": "((&)[\\s\\S]+) (\\{)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "name": "statement._if.mlogx",
+              "match": "(&if) ([^ \\n\\t]+)$",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.conditional.mlogx"
+                },
+                "2": {
+                  "name": "variable.other.constant.mlogx"
+                }
+              }
+            },
+            {
+              "name": "statement._for_of.mlogx",
+              "match": "(&for) ([^ \\n\\t]+) (of) ([\\s\\S]+)$",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.loop.mlogx"
+                },
+                "2": {
+                  "name": "variable.other.constant.mlogx"
+                },
+                "3": {
+                  "name": "keyword.operator.expression.of.mlogx"
+                },
+                "4": {
+                  "name": "__qwertyuiop__"
+                }
+              }
+            },
+            {
+              "name": "statement._for_in.mlogx",
+              "match": "(&for) ([^ \\n\\t]+) (in) (\\d+) (\\d+)$",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.loop.mlogx"
+                },
+                "2": {
+                  "name": "variable.other.constant.mlogx"
+                },
+                "3": {
+                  "name": "keyword.operator.expression.in.mlogx"
+                },
+                "4": {
+                  "name": "constant.numeric.integer.decimal.mlogx"
+                },
+                "5": {
+                  "name": "constant.numeric.integer.decimal.mlogx"
+                }
+              }
+            }
+          ]
+        },
+        "2": {
+          "name": "punctuation.definition.ampersand.mlogx"
+        },
+        "3": {
+          "name": "punctuation.definition.block.mlogx"
         }
       }
     },
