@@ -44,3 +44,5 @@ set x 5
 &for amog_US in 1 $num {
 	
 }
+print "suss
+ygus"
