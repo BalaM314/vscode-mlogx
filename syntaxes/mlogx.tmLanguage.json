@@ -254,6 +254,10 @@
           "match": "(?x)\n\\b(\n  read|write|draw|print|drawflush|printflush|getlink|control|radar|sensor|\n  ubind|ucontrol|uradar|ulocate|wait|lookup\n)\\b"
         },
         {
+          "name": "support.function.mlogx",
+          "match": "(?x)\\b(printf|println)\\b"
+        },
+        {
           "name": "keyword.control.end.mlog",
           "match": "\\bend\\b"
         },

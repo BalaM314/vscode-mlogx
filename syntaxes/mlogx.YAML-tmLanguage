@@ -219,6 +219,8 @@ repository:
             read|write|draw|print|drawflush|printflush|getlink|control|radar|sensor|
             ubind|ucontrol|uradar|ulocate|wait|lookup
           )\b
+      - name: support.function.mlogx
+        match: (?x)\b(call|increment|return|throw|uflag|printf|println)\b
       - name: keyword.control.end.mlog
         match: \bend\b
       - name: keyword.control.jump.mlog
