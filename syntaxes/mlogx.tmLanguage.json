@@ -45,12 +45,12 @@
     "compiler_consts": {
       "comment": "Compiler constants that are automatically replaced when your program is compiled.",
       "name": "support.constant.mlogx",
-      "match": "((\\$)(?:[^\\s()\"$]+|\\([^\\s()\"$]+\\)))",
+      "match": "(\\$)(?:[^\\s()\"$]+|\\([^\\s()\"$]+\\))",
       "captures": {
-        "1": {
+        "0": {
           "name": "variable.other.constant.mlogx"
         },
-        "2": {
+        "1": {
           "name": "punctuation.definition.dollar_sign.mlogx"
         }
       }
@@ -413,19 +413,22 @@
     },
     "string": {
       "name": "string.quoted.double.mlog",
-      "match": "(\")[^\\n]*(\")",
-      "captures": {
-        "1": {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
           "name": "punctuation.definition.string.begin.mlog"
-        },
-        "2": {
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
           "name": "punctuation.definition.string.end.mlog"
         }
       },
       "patterns": [
         {
           "name": "meta.template.expression.mlogx",
-          "match": "(\\{)([\\w-]+)(\\})",
+          "match": "(\\{)([\\w.@-]+)(\\})",
           "captures": {
             "1": {
               "name": "punctuation.definition.template-expression.begin.mlogx"

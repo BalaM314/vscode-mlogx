@@ -1,6 +1,7 @@
 comments:
 # hash comment
 // single line comment
+print "e"
 print /* block comment */"sus"
 /* multiline
 comment */
@@ -46,3 +47,6 @@ set x 5
 }
 print "suss
 ygus"
+printflush $sus $(sussy)amogus
+print "am $og us $(a) "
+print "i {am} {@unit.x} $SUSSY A$(MO)GUS"
