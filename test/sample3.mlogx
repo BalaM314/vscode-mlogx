@@ -1,24 +1,24 @@
-	move_units: #Move each unit to its destination.
-		&for n in 1 $numRecons {
-			move_unit$(n):
-			ubind unit$(n)
-			ucontrol move reconstructor$(n).x reconstructor$(n).y
-			ucontrol boost true
-			&if $print {
-				sensor @unit.x
-				op floor @unit.x
-				sensor @unit.y
-				op floor @unit.y
-				printf "Unit $(n) is at {@unit.x}, {@unit.y}\n"
-			}
-			ucontrol within reconstructor$(n).x reconstructor$(n).y 3 unit$(n).reached
-			jump unit$(n)_moved equal unit$(n).reached false
-			#unit reached destination, payenter
-			ucontrol payEnter
-			unit$(n)_moved:
-		}
+move_units: #Move each unit to its destination.
+	&for n in 1 $numRecons {
+		move_unit$(n):
+		ubind unit$(n)
+		ucontrol move reconstructor$(n).x reconstructor$(n).y
+		ucontrol boost true
 		&if $print {
-			print "Open the adjacent proc to change unit type"
-			printflush message1
+			sensor @unit.x
+			op floor @unit.x
+			sensor @unit.y
+			op floor @unit.y
+			printf "Unit $(n) is at {@unit.x}, {@unit.y}\n"
 		}
-		jump main_loop
+		ucontrol within reconstructor$(n).x reconstructor$(n).y 3 unit$(n).reached
+		jump unit$(n)_moved equal unit$(n).reached false
+		#unit reached destination, payenter
+		ucontrol payEnter
+		unit$(n)_moved:
+	}
+	&if $print {
+		print "Open the adjacent proc to change unit type"
+		printflush message1
+	}
+	jump main_loop

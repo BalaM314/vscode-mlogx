@@ -1,4 +1,6 @@
-# Mindustry Logic for VS Code
+# Mindustry Logic Extended for VS Code
+
+![logo](images/logo.png)
 
 Mindustry Logic Extended (`mlogx`) language support for Visual Studio Code.
 
@@ -10,7 +12,7 @@ Credit to Antyos for making the original `mlog` extension, which this is based o
 
 ### Highlighting Sample
 
-![sample2](images/sample2.png)
+![sample2](images/sample.png)
 
 ## Changelog
 
