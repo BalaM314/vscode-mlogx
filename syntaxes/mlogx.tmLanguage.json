@@ -255,7 +255,7 @@
         },
         {
           "name": "support.function.mlogx",
-          "match": "(?x)\\b(printf|println)\\b"
+          "match": "(?x)\\b(call|increment|return|throw|uflag|printf|println)\\b"
         },
         {
           "name": "keyword.control.end.mlog",
@@ -399,7 +399,7 @@
         {
           "name": "constant.language.operation.mlog",
           "match": "(?x)\n\\b(?:\n  add|sub|mul|div|idiv|mod|pow|equal|notEqual|strictEqual|land|lessThan|\n  lessThanEq|greaterThan|greaterThanEq|shl|shr|or|and|xor|not|max|min|\n  angle|len|noise|abs|log|log10|sin|cos|tan|asin|acos|atan|floor|ceil|\n  sqrt|rand\n)\\b",
-          "comment": "Does not include comparisons covered by"
+          "comment": "Does not include comparisons covered by #jump_conditions"
         },
         {
           "name": "invalid.deprecated.operation.mlog",
@@ -421,7 +421,24 @@
         "0": {
           "name": "punctuation.definition.string.end.mlog"
         }
-      }
+      },
+      "patterns": [
+        {
+          "name": "meta.template.expression.mlogx",
+          "match": "(\\{)([\\w-]+)(\\})",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.template-expression.begin.mlogx"
+            },
+            "2": {
+              "name": "variable.other.readwrite.mlogx"
+            },
+            "3": {
+              "name": "punctuation.definition.template-expression.end.mlogx"
+            }
+          }
+        }
+      ]
     }
   }
 }

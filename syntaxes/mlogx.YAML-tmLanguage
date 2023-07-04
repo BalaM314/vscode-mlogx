@@ -319,7 +319,7 @@ repository:
             angle|len|noise|abs|log|log10|sin|cos|tan|asin|acos|atan|floor|ceil|
             sqrt|rand
           )\b
-        comment: Does not include comparisons covered by #jump_conditions
+        comment: 'Does not include comparisons covered by #jump_conditions'
       - name: invalid.deprecated.operation.mlog
         match: \b(?:atan2|dst)\b
         comment: '`atan2` and `dst` were removed in favor of `angle` and `len`, respectively'
@@ -332,3 +332,11 @@ repository:
     end: '"'
     endCaptures:
       '0': { name: punctuation.definition.string.end.mlog }
+    patterns:
+      - name: meta.template.expression.mlogx
+        match: (\{)([\w-]+)(\})
+        captures:
+          '1': { name: punctuation.definition.template-expression.begin.mlogx }
+          '2': { name: variable.other.readwrite.mlogx }
+          '3': { name: punctuation.definition.template-expression.end.mlogx }
+

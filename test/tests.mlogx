@@ -22,7 +22,7 @@ set x 5
 
 }
 &if amogus {
-	printf "amog {x}"
+	printf "amog {usa} {amo gus}"
 	println "us"
 	printflush $msg
 }
