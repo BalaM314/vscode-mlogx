@@ -18,9 +18,10 @@ repository:
   compiler_consts:
     comment: Compiler constants that are automatically replaced when your program is compiled.
     name: support.constant.mlogx
-    match: '(\$)([\w\-_]+)\b'
+    match: '((\$)[\w\-_]+)\b'
     captures:
-      '1': { name: punctuation.definition.dollar_sign.mlogx }
+      '1': { name: variable.other.constant.mlogx }
+      '2': { name: punctuation.definition.dollar_sign.mlogx }
 
   at_names:
     comment: Internal variables with pre-defined meaning, in the format of @var-name

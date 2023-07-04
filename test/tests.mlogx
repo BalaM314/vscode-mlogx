@@ -4,6 +4,7 @@ comments:
 print /* block comment */"sus"
 /* multiline
 comment */
+print "sussy /* baka" /* fake string " */
 
 compiler_consts:
 	print $sussy

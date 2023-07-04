@@ -39,9 +39,12 @@
     "compiler_consts": {
       "comment": "Compiler constants that are automatically replaced when your program is compiled.",
       "name": "support.constant.mlogx",
-      "match": "(\\$)([\\w\\-_]+)\\b",
+      "match": "((\\$)[\\w\\-_]+)\\b",
       "captures": {
         "1": {
+          "name": "variable.other.constant.mlogx"
+        },
+        "2": {
           "name": "punctuation.definition.dollar_sign.mlogx"
         }
       }
