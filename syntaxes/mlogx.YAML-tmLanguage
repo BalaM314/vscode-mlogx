@@ -19,7 +19,7 @@ repository:
   compiler_consts:
     comment: Compiler constants that are automatically replaced when your program is compiled.
     name: support.constant.mlogx
-    match: '((\$)[^ $]+)\b'
+    match: '((\$)(?:[^\s()$]+|\([^\s()$]+\)))'
     captures:
       '1': { name: variable.other.constant.mlogx }
       '2': { name: punctuation.definition.dollar_sign.mlogx }
