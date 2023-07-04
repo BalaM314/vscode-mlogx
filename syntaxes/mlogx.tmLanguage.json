@@ -36,6 +36,9 @@
     },
     {
       "include": "#string"
+    },
+    {
+      "include": "#invalid_string"
     }
   ],
   "repository": {
@@ -410,15 +413,12 @@
     },
     "string": {
       "name": "string.quoted.double.mlog",
-      "begin": "\"",
-      "beginCaptures": {
-        "0": {
+      "match": "(\")[^\\n]*(\")",
+      "captures": {
+        "1": {
           "name": "punctuation.definition.string.begin.mlog"
-        }
-      },
-      "end": "\"",
-      "endCaptures": {
-        "0": {
+        },
+        "2": {
           "name": "punctuation.definition.string.end.mlog"
         }
       },
@@ -442,6 +442,15 @@
           "include": "#compiler_consts"
         }
       ]
+    },
+    "invalid_string": {
+      "name": "invalid.string.quoted.double.mlog",
+      "match": "(\")[^\"]*\\n",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.mlog"
+        }
+      }
     }
   }
 }
