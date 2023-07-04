@@ -11,9 +11,14 @@
     ],
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
-        ["\"", "\""]
+        ["\"", "\""],
+        ["{", "}"],
+        ["(", ")"],
     ],
     "folding": {
         "offSide": true
-    }
+    },
+    "colorizedBracketPairs": [
+        ["{", "}"]
+    ]
 }
