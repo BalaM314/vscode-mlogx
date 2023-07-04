@@ -43,7 +43,7 @@ repository:
               '3': { name: keyword.operator.expression.of.mlogx }
               '4': { name: __qwertyuiop__ } #this causes it to work and i have no idea why
           - name: statement._for_in.mlogx
-            match: '(&for) ([^ \n\t]+) (in) (\d+) (\d+)$'
+            match: '(&for) ([^ \n\t]+) (in) (\d+|\$[^\s()$]+) (\d+|\$[^\s()$]+)$'
             captures:
               '1': { name: keyword.control.loop.mlogx }
               '2': { name: variable.other.constant.mlogx }

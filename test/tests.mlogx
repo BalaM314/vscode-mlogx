@@ -41,3 +41,6 @@ set x 5
 &for x in 1 5 {
 
 }
+&for amog_US in 1 $num {
+	
+}

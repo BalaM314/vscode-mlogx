@@ -91,7 +91,7 @@
             },
             {
               "name": "statement._for_in.mlogx",
-              "match": "(&for) ([^ \\n\\t]+) (in) (\\d+) (\\d+)$",
+              "match": "(&for) ([^ \\n\\t]+) (in) (\\d+|\\$[^\\s()$]+) (\\d+|\\$[^\\s()$]+)$",
               "captures": {
                 "1": {
                   "name": "keyword.control.loop.mlogx"
