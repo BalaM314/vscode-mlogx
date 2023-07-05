@@ -280,10 +280,10 @@ repository:
     name: entity.name.function.mlog
     match: \b([\w\-\$()]+)(:)(?=\s|$)
     captures:
-      '1': { name: entity.name.function.mlog }
+      '1':
+        patterns:
+          - include: "#compiler_consts"
       '2': { name: punctuation.separator.colon.mlog }
-    patterns:
-      - include: "#compiler_consts"
 
   numbers:
     patterns:

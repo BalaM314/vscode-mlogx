@@ -29,7 +29,7 @@ set x 5
 	printflush $msg
 }
 &for amog of a b c {
-	thing_$(amog):
+	thing_$(amog)_us:
 }
 &for lol {
 }
