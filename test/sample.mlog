@@ -11,6 +11,7 @@ sensor result block1 @copper
 set result 0
 op add result a b
 end
+stop
 jump -1 notEqual x false
 ubind @poly
 ucontrol move 0 0 0 0 0
@@ -18,4 +19,33 @@ uradar enemy any any distance turret1 1 result
 ulocate building core true @copper outx outy found building
 wait 0.5
 lookup block result 0
+getblock floor result 10 32
+getblock ore result 10 32
+getblock block result 10 32
+getblock building result 10 32
+setblock floor @dark-panel-1 10 32 @derelict 1
+setblock ore @plastanium 10 32 @derelict 1
+setblock block @foreshadow 10 32 @derelict 1
+spawn @dagger 10 10 90 @sharded output
+status false tarred unit 10
+status true shocked unit 10
+spawnwave 10 10 false
+setrule unitBuildSpeed 10
+message announce 3
+message notify
+message mission
+message toast 3
+cutscene pan 100 100 0.06
+cutscene zoom 100
+cutscene stop
+explosion @crux 0 0 5 50 true true false
+setrate 10
+fetch unit result @sharded 0
+fetch player result @sharded 0
+fetch coreCount result @sharded
+fetch buildCount result @sharded 0 @conveyor
+getflag result "flag"
+setflag "flag" true
+setprop @team nucleus1 @sharded
+setprop @plastanium @unit 20`
 # This is a comment

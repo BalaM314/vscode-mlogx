@@ -2,6 +2,7 @@ comments:
 # hash comment
 // single line comment
 print "e"
+jump - + * / >= < != ~= == #amogu
 print /* block comment */"sus"
 /* multiline
 comment */

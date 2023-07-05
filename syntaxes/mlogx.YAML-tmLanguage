@@ -225,6 +225,8 @@ repository:
         match: (?x)\b(call|increment|return|throw|uflag|printf|println)\b
       - name: keyword.control.end.mlog
         match: \bend\b
+      - name: keyword.control.stop.mlog
+        match: \bstop\b
       - name: keyword.control.jump.mlog
         match: \bjump\b
       - name: keyword.control.set.mlog
@@ -322,6 +324,12 @@ repository:
             sqrt|rand
           )\b
         comment: 'Does not include comparisons covered by #jump_conditions'
+      - name: keyword.operator.relational.mlogx
+        comment: 'MLOGX short operands'
+        match: '(?:~=|==|!=|<>|&&|<=|<|>=|>)'
+      - name: keyword.operator.arithmetic.mlogx
+        comment: 'MLOGX short operands'
+        match: '(?:\+|-|\*|(?:(?<!/)/(?!/))|\*\*|<<|>>|\||\|\||&|\^)'
       - name: invalid.deprecated.operation.mlog
         match: \b(?:atan2|dst)\b
         comment: '`atan2` and `dst` were removed in favor of `angle` and `len`, respectively'

@@ -254,7 +254,7 @@
       "patterns": [
         {
           "name": "support.function.mlog",
-          "match": "(?x)\n\\b(\n  read|write|draw|print|drawflush|printflush|getlink|control|radar|sensor|\n  ubind|ucontrol|uradar|ulocate|wait|lookup\n)\\b"
+          "match": "(?x)\n\\b(\n  read|write|draw|print|drawflush|printflush|getlink|control|radar|sensor|\n  ubind|ucontrol|uradar|ulocate|wait|lookup|\n  getblock|setblock|spawn|status|spawnwave|setrule|message|cutscene|explosion|setrate|fetch|getflag|setflag|setprop\n)\\b"
         },
         {
           "name": "support.function.mlogx",
@@ -263,6 +263,10 @@
         {
           "name": "keyword.control.end.mlog",
           "match": "\\bend\\b"
+        },
+        {
+          "name": "keyword.control.stop.mlog",
+          "match": "\\bstop\\b"
         },
         {
           "name": "keyword.control.jump.mlog",
@@ -403,6 +407,16 @@
           "name": "constant.language.operation.mlog",
           "match": "(?x)\n\\b(?:\n  add|sub|mul|div|idiv|mod|pow|equal|notEqual|strictEqual|land|lessThan|\n  lessThanEq|greaterThan|greaterThanEq|shl|shr|or|and|xor|not|max|min|\n  angle|len|noise|abs|log|log10|sin|cos|tan|asin|acos|atan|floor|ceil|\n  sqrt|rand\n)\\b",
           "comment": "Does not include comparisons covered by #jump_conditions"
+        },
+        {
+          "name": "keyword.operator.relational.mlogx",
+          "comment": "MLOGX short operands",
+          "match": "(?:~=|==|!=|<>|&&|<=|<|>=|>)"
+        },
+        {
+          "name": "keyword.operator.arithmetic.mlogx",
+          "comment": "MLOGX short operands",
+          "match": "(?:\\+|-|\\*|(?:(?<!/)/(?!/))|\\*\\*|<<|>>|\\||\\|\\||&|\\^)"
         },
         {
           "name": "invalid.deprecated.operation.mlog",
