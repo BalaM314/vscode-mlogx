@@ -29,7 +29,7 @@ set x 5
 	printflush $msg
 }
 &for amog of a b c {
-
+	thing_$(amog):
 }
 &for lol {
 }
@@ -43,7 +43,7 @@ set x 5
 &for x in 1 5 {
 
 }
-&for amog_US in 1 $num {
+&for amog_US in $num1 $(num) {
 	
 }
 print "suss

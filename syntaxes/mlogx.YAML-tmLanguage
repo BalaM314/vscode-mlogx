@@ -331,7 +331,7 @@ repository:
         match: '(?:~=|==|!=|<>|&&|<=|<|>=|>)'
       - name: keyword.operator.arithmetic.mlogx
         comment: 'MLOGX short operands'
-        match: '(?:\+|-|\*|(?:(?<!/)/(?!/))|\*\*|<<|>>|\||\|\||&|\^)'
+        match: '(?:\+|-|(?:(?<!\*)\*(?!\*))|(?:(?<!/|\*)/(?!/|\*))|\*\*|<<|>>|\||\|\||&|\^)'
       - name: invalid.deprecated.operation.mlog
         match: \b(?:atan2|dst)\b
         comment: '`atan2` and `dst` were removed in favor of `angle` and `len`, respectively'
