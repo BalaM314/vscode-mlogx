@@ -218,7 +218,8 @@ repository:
           (?x)
           \b(
             read|write|draw|print|drawflush|printflush|getlink|control|radar|sensor|
-            ubind|ucontrol|uradar|ulocate|wait|lookup
+            ubind|ucontrol|uradar|ulocate|wait|lookup|
+            getblock|setblock|spawn|status|spawnwave|setrule|message|cutscene|explosion|setrate|fetch|getflag|setflag|setprop
           )\b
       - name: support.function.mlogx
         match: (?x)\b(call|increment|return|throw|uflag|printf|println)\b
